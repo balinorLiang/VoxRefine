@@ -1,0 +1,9 @@
+# Cloudflare Pages / Netlify 等支持的响应头配置。
+# 注意：GitHub Pages 不支持 _headers，需要改用支持自定义响应头的托管，或用 meta CSP。
+
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  X-Frame-Options: DENY

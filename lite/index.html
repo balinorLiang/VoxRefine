@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>多音字检查器 · 给 AI 配音排雷</title>
+  <meta name="description" content="本地运行的中文多音字检查器，帮助 AI 配音视频在写稿阶段发现并修正多音字。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="返回首页">
+      <span class="brand-mark" aria-hidden="true">音</span>
+      <span class="brand-text">
+        <strong>多音字检查器</strong>
+        <small>AI 配音排雷工具</small>
+      </span>
+    </a>
+    <nav class="header-nav" aria-label="站点导航">
+      <span class="privacy-badge">本地处理 · 不上传</span>
+      <a class="github-link js-repo-link" href="#" target="_blank" rel="noreferrer" hidden>GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">先检查，再配音</p>
+      <h1>别让 AI 把「重庆」<br>读成 <span class="wrong-reading">zhòng qìng</span></h1>
+      <p class="hero-copy">粘贴文案或导入 SRT，自动标出高风险多音字，给出读音候选和可复制的 SSML。所有文本只在浏览器里处理。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#checker">开始检查</a>
+        <button class="btn btn-ghost" type="button" id="load-example">载入示例</button>
+      </div>
+      <ul class="hero-points" aria-label="产品特点">
+        <li>不用注册</li>
+        <li>不用安装</li>
+        <li>可离线使用</li>
+      </ul>
+    </section>
+
+    <section class="workspace" id="checker">
+      <div class="panel editor-panel">
+        <div class="panel-head">
+          <div>
+            <h2>你的文案</h2>
+            <p id="draft-status">草稿自动保存在本机</p>
+          </div>
+          <div class="editor-actions">
+            <label class="file-button">
+              导入 SRT/TXT
+              <input type="file" id="file-input" accept=".srt,.txt,text/plain" hidden>
+            </label>
+            <button class="text-button" type="button" id="clear-text">清空</button>
+          </div>
+        </div>
+        <textarea id="script-input" spellcheck="false" placeholder="把 AI 配音文案粘贴到这里，例如：&#10;欢迎来到重庆。我们公司在银行行业工作，行长今天出差了。"></textarea>
+        <div class="editor-footer">
+          <span id="char-count">0 字</span>
+          <div class="editor-footer-actions">
+            <span class="keyboard-hint">Ctrl / ⌘ + Enter</span>
+            <button class="btn btn-primary" type="button" id="check-button">检查多音字</button>
+          </div>
+        </div>
+      </div>
+
+      <aside class="panel result-panel">
+        <div class="tabs" role="tablist" aria-label="结果与词库">
+          <button class="tab is-active" type="button" role="tab" aria-selected="true" data-tab="results">检查结果</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="glossary">词库</button>
+        </div>
+
+        <div class="tab-panel is-active" id="results-panel" role="tabpanel">
+          <div class="summary" id="summary">
+            <div class="summary-number" id="summary-count">0</div>
+            <div class="summary-copy">
+              <strong>处高风险读音</strong>
+              <span id="summary-detail">粘贴文案后点击检查</span>
+            </div>
+          </div>
+          <div class="result-toolbar" id="result-toolbar" hidden>
+            <button class="text-button" type="button" id="accept-all">全部采用建议</button>
+            <button class="text-button" type="button" id="reset-all">重置选择</button>
+          </div>
+          <div class="matches" id="matches"></div>
+          <div class="empty-state" id="empty-state">
+            <div class="empty-icon" aria-hidden="true">⌕</div>
+            <p>还没有检查结果</p>
+            <span>粘贴文案，或先载入一段示例。</span>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="glossary-panel" role="tabpanel">
+          <div class="glossary-head">
+            <h3>高频多音字词库</h3>
+            <p>收录地名、姓氏、成语和常见易错词。词典不追求穷尽，欢迎补充。</p>
+            <input type="search" id="glossary-search" placeholder="搜索词语、拼音或说明…" autocomplete="off">
+          </div>
+          <div class="glossary-list" id="glossary-list"></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="panel export-panel" id="export-panel">
+      <div class="panel-head">
+        <div>
+          <h2>导出修正稿</h2>
+          <p>选好读音后，复制标注稿或直接生成 SSML。</p>
+        </div>
+        <div class="export-actions">
+          <button class="btn btn-ghost btn-small" type="button" id="copy-export">复制</button>
+          <button class="btn btn-ghost btn-small" type="button" id="download-export">下载</button>
+        </div>
+      </div>
+      <div class="export-tabs" role="tablist" aria-label="导出格式">
+        <button class="export-tab is-active" type="button" data-export="annotated">标注稿</button>
+        <button class="export-tab" type="button" data-export="tencent">腾讯云 SSML</button>
+        <button class="export-tab" type="button" data-export="baidu">百度 SSML</button>
+      </div>
+      <pre class="export-output" id="export-output" aria-live="polite">检查后，这里会生成可复制的修正稿。</pre>
+      <p class="export-hint" id="export-hint"></p>
+    </section>
+
+    <section class="info-grid">
+      <article class="info-card">
+        <h3>为什么不是“一键修音”？</h3>
+        <p>多音字错误发生在文本到读音的映射，不是音质问题。先在写稿阶段排雷，成本最低；成片修复需要重新合成、对齐和替换音轨，适合作为下一步。</p>
+      </article>
+      <article class="info-card">
+        <h3>怎么用最省事？</h3>
+        <p>把文案粘进来，确认高风险词，复制“标注稿”或 SSML，再交给剪映、讯飞、腾讯云/百度 TTS。标注稿里的拼音可以直接人工核对。</p>
+      </article>
+      <article class="info-card">
+        <h3>词库怎么共建？</h3>
+        <p>发现漏词或误报，点结果卡片里的“导出案例”，把 JSON 贴到 GitHub Issue。词库是公开的，贡献者会被记录。</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>多音字检查器</strong>
+      <span>v0.1 · 本地优先 · 开源共建</span>
+    </div>
+    <div class="footer-links">
+      <a href="#checker">开始检查</a>
+      <a class="js-repo-link" href="#" target="_blank" rel="noreferrer" hidden>GitHub</a>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="config.js"></script>
+  <script src="data/glossary.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

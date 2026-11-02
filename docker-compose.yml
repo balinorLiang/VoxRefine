@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: polyphone-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: polyphone
+      POSTGRES_PASSWORD: polyphone
+      POSTGRES_DB: polyphone
+    ports:
+      - "55432:5432"
+    volumes:
+      - polyphone_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U polyphone -d polyphone"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  polyphone_pgdata:

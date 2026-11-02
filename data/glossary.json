@@ -1,0 +1,2315 @@
+{
+  "entries": [
+    {
+      "default": "chong2 qing4",
+      "id": "chongqing",
+      "note": "“重”在地名重庆中读 chóng，不读 zhòng。",
+      "readings": [
+        {
+          "note": "地名",
+          "pinyin": "chong2 qing4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "zhong4 qing4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "place",
+      "word": "重庆"
+    },
+    {
+      "default": "yin2 hang2",
+      "id": "yinhang",
+      "note": "“行”在银行中读 háng。",
+      "readings": [
+        {
+          "note": "金融机构",
+          "pinyin": "yin2 hang2"
+        },
+        {
+          "note": "误读",
+          "pinyin": "yin2 xing2",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "银行"
+    },
+    {
+      "default": "hang2 zhang3",
+      "id": "hangzhang",
+      "note": "“行”读 háng，“长”读 zhǎng。",
+      "readings": [
+        {
+          "note": "银行负责人",
+          "pinyin": "hang2 zhang3"
+        },
+        {
+          "note": "误读",
+          "pinyin": "xing2 zhang3",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "行长"
+    },
+    {
+      "default": "hang2 ye4",
+      "id": "hangye",
+      "note": "“行”在行业中读 háng。",
+      "readings": [
+        {
+          "note": "行业、职业",
+          "pinyin": "hang2 ye4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "xing2 ye4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "行业"
+    },
+    {
+      "default": "xing2 zou3",
+      "id": "xingzou",
+      "note": "“行走”的“行”读 xíng。",
+      "readings": [
+        {
+          "note": "走路",
+          "pinyin": "xing2 zou3"
+        },
+        {
+          "note": "误读",
+          "pinyin": "hang2 zou3",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "word",
+      "word": "行走"
+    },
+    {
+      "default": "zhang3 da4",
+      "id": "zhangda",
+      "note": "“长”在长大中读 zhǎng。",
+      "readings": [
+        {
+          "note": "成长",
+          "pinyin": "zhang3 da4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "chang2 da4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "长大"
+    },
+    {
+      "default": "chang2 jiang1",
+      "id": "changjiang",
+      "note": "“长”在长江中读 cháng。",
+      "readings": [
+        {
+          "note": "地名",
+          "pinyin": "chang2 jiang1"
+        },
+        {
+          "note": "误读",
+          "pinyin": "zhang3 jiang1",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "place",
+      "word": "长江"
+    },
+    {
+      "default": "chang2 du4",
+      "id": "changdu",
+      "note": "“长度”的“长”读 cháng。",
+      "readings": [
+        {
+          "note": "尺寸",
+          "pinyin": "chang2 du4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "zhang3 du4",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "word",
+      "word": "长度"
+    },
+    {
+      "default": "chang2 chu4",
+      "id": "changchu",
+      "note": "“长处”的“长”读 cháng。",
+      "readings": [
+        {
+          "note": "优点",
+          "pinyin": "chang2 chu4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "zhang3 chu4",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "word",
+      "word": "长处"
+    },
+    {
+      "default": "chong2 fu4",
+      "id": "chongfu",
+      "note": "“重复”的“重”读 chóng。",
+      "readings": [
+        {
+          "note": "再来一次",
+          "pinyin": "chong2 fu4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "zhong4 fu4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "重复"
+    },
+    {
+      "default": "zhong4 liang4",
+      "id": "zhongliang",
+      "note": "“重量”的“重”读 zhòng。",
+      "readings": [
+        {
+          "note": "分量",
+          "pinyin": "zhong4 liang4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "chong2 liang4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "重量"
+    },
+    {
+      "default": "zhong4 yao4",
+      "id": "zhongyao",
+      "note": "“重要”的“重”读 zhòng。",
+      "readings": [
+        {
+          "note": "要紧",
+          "pinyin": "zhong4 yao4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "chong2 yao4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "重要"
+    },
+    {
+      "default": "chong2 xin1",
+      "id": "chongxin",
+      "note": "“重新”的“重”读 chóng。",
+      "readings": [
+        {
+          "note": "再一次",
+          "pinyin": "chong2 xin1"
+        },
+        {
+          "note": "误读",
+          "pinyin": "zhong4 xin1",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "重新"
+    },
+    {
+      "default": "yin1 yue4",
+      "id": "yinyue",
+      "note": "“乐”在音乐中读 yuè。",
+      "readings": [
+        {
+          "note": "音乐",
+          "pinyin": "yin1 yue4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "yin1 le4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "音乐"
+    },
+    {
+      "default": "kuai4 le4",
+      "id": "kuaile",
+      "note": "“快乐”的“乐”读 lè。",
+      "readings": [
+        {
+          "note": "高兴",
+          "pinyin": "kuai4 le4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "kuai4 yue4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "快乐"
+    },
+    {
+      "default": "yue4 qi4",
+      "id": "yueqi",
+      "note": "“乐器”的“乐”读 yuè。",
+      "readings": [
+        {
+          "note": "演奏工具",
+          "pinyin": "yue4 qi4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "le4 qi4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "乐器"
+    },
+    {
+      "default": "le4 qu4",
+      "id": "lequ",
+      "note": "“乐趣”的“乐”读 lè。",
+      "readings": [
+        {
+          "note": "趣味",
+          "pinyin": "le4 qu4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "yue4 qu4",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "word",
+      "word": "乐趣"
+    },
+    {
+      "default": "jue2 de5",
+      "id": "juede",
+      "note": "“觉得”的“觉”读 jué。",
+      "readings": [
+        {
+          "note": "认为",
+          "pinyin": "jue2 de5"
+        },
+        {
+          "note": "误读",
+          "pinyin": "jiao4 de5",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "觉得"
+    },
+    {
+      "default": "shui4 jiao4",
+      "id": "shuijiao",
+      "note": "“睡觉”的“觉”读 jiào。",
+      "readings": [
+        {
+          "note": "睡眠",
+          "pinyin": "shui4 jiao4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "shui4 jue2",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "睡觉"
+    },
+    {
+      "default": "jue2 se4",
+      "id": "juese",
+      "note": "“角色”的“角”读 jué。",
+      "readings": [
+        {
+          "note": "人物身份",
+          "pinyin": "jue2 se4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "jiao3 se4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "角色"
+    },
+    {
+      "default": "jiao3 du4",
+      "id": "jiaodu",
+      "note": "“角度”的“角”读 jiǎo。",
+      "readings": [
+        {
+          "note": "视角",
+          "pinyin": "jiao3 du4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "jue2 du4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "角度"
+    },
+    {
+      "default": "zhu3 jue2",
+      "id": "zhujue",
+      "note": "“主角”的“角”读 jué。",
+      "readings": [
+        {
+          "note": "主要角色",
+          "pinyin": "zhu3 jue2"
+        },
+        {
+          "note": "误读",
+          "pinyin": "zhu3 jiao3",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "word",
+      "word": "主角"
+    },
+    {
+      "default": "jiao3 luo4",
+      "id": "jiaoluo",
+      "note": "“角落”的“角”读 jiǎo。",
+      "readings": [
+        {
+          "note": "方位",
+          "pinyin": "jiao3 luo4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "jue2 luo4",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "word",
+      "word": "角落"
+    },
+    {
+      "default": "cha1 bie2",
+      "id": "chabie",
+      "note": "“差别”的“差”读 chā。",
+      "readings": [
+        {
+          "note": "差异",
+          "pinyin": "cha1 bie2"
+        },
+        {
+          "note": "误读",
+          "pinyin": "cha4 bie2",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "差别"
+    },
+    {
+      "default": "cen1 ci1",
+      "id": "canci",
+      "note": "“参差”读 cēn cī，不读 cān chā。",
+      "readings": [
+        {
+          "note": "长短不齐",
+          "pinyin": "cen1 ci1"
+        },
+        {
+          "note": "误读",
+          "pinyin": "can1 cha1",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "参差"
+    },
+    {
+      "default": "chu1 chai1",
+      "id": "chuchai",
+      "note": "“出差”的“差”读 chāi。",
+      "readings": [
+        {
+          "note": "因公外出",
+          "pinyin": "chu1 chai1"
+        },
+        {
+          "note": "误读",
+          "pinyin": "chu1 cha1",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "出差"
+    },
+    {
+      "default": "cha4 jin4",
+      "id": "chajin",
+      "note": "“差劲”的“差”读 chà。",
+      "readings": [
+        {
+          "note": "不好",
+          "pinyin": "cha4 jin4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "cha1 jin4",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "word",
+      "word": "差劲"
+    },
+    {
+      "default": "hai2 you3",
+      "id": "haiyou",
+      "note": "“还有”的“还”读 hái。",
+      "readings": [
+        {
+          "note": "另外有",
+          "pinyin": "hai2 you3"
+        },
+        {
+          "note": "误读",
+          "pinyin": "huan2 you3",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "还有"
+    },
+    {
+      "default": "gui1 huan2",
+      "id": "guihuan",
+      "note": "“归还”的“还”读 huán。",
+      "readings": [
+        {
+          "note": "还给",
+          "pinyin": "gui1 huan2"
+        },
+        {
+          "note": "误读",
+          "pinyin": "gui1 hai2",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "归还"
+    },
+    {
+      "default": "hai2 shi4",
+      "id": "haishi",
+      "note": "“还是”的“还”读 hái。",
+      "readings": [
+        {
+          "note": "仍然/或者",
+          "pinyin": "hai2 shi4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "huan2 shi4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "还是"
+    },
+    {
+      "default": "di2 que4",
+      "id": "dique",
+      "note": "“的确”的“的”读 dí。",
+      "readings": [
+        {
+          "note": "确实",
+          "pinyin": "di2 que4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "di4 que4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "的确"
+    },
+    {
+      "default": "mu4 di4",
+      "id": "mudi",
+      "note": "“目的”的“的”读 dì。",
+      "readings": [
+        {
+          "note": "目标",
+          "pinyin": "mu4 di4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "mu4 de5",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "目的"
+    },
+    {
+      "default": "shi4 de5",
+      "id": "shide",
+      "note": "“似的”读 shì de。",
+      "readings": [
+        {
+          "note": "好像",
+          "pinyin": "shi4 de5"
+        },
+        {
+          "note": "误读",
+          "pinyin": "si4 de5",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "似的"
+    },
+    {
+      "default": "da4 di4",
+      "id": "dadi",
+      "note": "“大地”的“地”读 dì。",
+      "readings": [
+        {
+          "note": "土地",
+          "pinyin": "da4 di4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "da4 de5",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "word",
+      "word": "大地"
+    },
+    {
+      "default": "liao3 jie3",
+      "id": "liaojie",
+      "note": "“了解”的“了”读 liǎo。",
+      "readings": [
+        {
+          "note": "明白",
+          "pinyin": "liao3 jie3"
+        },
+        {
+          "note": "误读",
+          "pinyin": "le5 jie3",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "了解"
+    },
+    {
+      "default": "liao3 bu5 qi3",
+      "id": "liaobuqi",
+      "note": "“了不起”的“了”读 liǎo。",
+      "readings": [
+        {
+          "note": "不简单",
+          "pinyin": "liao3 bu5 qi3"
+        },
+        {
+          "note": "误读",
+          "pinyin": "le5 bu5 qi3",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "idiom",
+      "word": "了不起"
+    },
+    {
+      "default": "de2 dao4",
+      "id": "dedao",
+      "note": "“得到”的“得”读 dé。",
+      "readings": [
+        {
+          "note": "获得",
+          "pinyin": "de2 dao4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "de5 dao4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "得到"
+    },
+    {
+      "default": "dei3 kui1",
+      "id": "deikui",
+      "note": "“得亏”的“得”读 děi。",
+      "readings": [
+        {
+          "note": "幸亏",
+          "pinyin": "dei3 kui1"
+        },
+        {
+          "note": "误读",
+          "pinyin": "de2 kui1",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "word",
+      "word": "得亏"
+    },
+    {
+      "default": "zong3 dei3",
+      "id": "zongdei",
+      "note": "“总得”的“得”读 děi。",
+      "readings": [
+        {
+          "note": "必须",
+          "pinyin": "zong3 dei3"
+        },
+        {
+          "note": "误读",
+          "pinyin": "zong3 de2",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "word",
+      "word": "总得"
+    },
+    {
+      "default": "di4 fang1",
+      "id": "difang",
+      "note": "“地方”的“地”读 dì。",
+      "readings": [
+        {
+          "note": "地点",
+          "pinyin": "di4 fang1"
+        },
+        {
+          "note": "误读",
+          "pinyin": "de5 fang1",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "地方"
+    },
+    {
+      "default": "man4 man4 de5",
+      "id": "manmandi",
+      "note": "“慢慢地”的“地”是轻声 de。",
+      "readings": [
+        {
+          "note": "状语助词",
+          "pinyin": "man4 man4 de5"
+        },
+        {
+          "note": "误读",
+          "pinyin": "man4 man4 di4",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "word",
+      "word": "慢慢地"
+    },
+    {
+      "default": "tu3 di4",
+      "id": "tudi",
+      "note": "“土地”的“地”读 dì。",
+      "readings": [
+        {
+          "note": "土壤",
+          "pinyin": "tu3 di4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "tu3 de5",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "word",
+      "word": "土地"
+    },
+    {
+      "default": "mu4 di4 di4",
+      "id": "mudidi",
+      "note": "“目的地”的前一个“的”读 dì。",
+      "readings": [
+        {
+          "note": "终点",
+          "pinyin": "mu4 di4 di4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "mu4 de5 di4",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "word",
+      "word": "目的地"
+    },
+    {
+      "default": "hao3 chi1",
+      "id": "haochi",
+      "note": "“好吃”的“好”读 hǎo。",
+      "readings": [
+        {
+          "note": "美味",
+          "pinyin": "hao3 chi1"
+        },
+        {
+          "note": "误读",
+          "pinyin": "hao4 chi1",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "好吃"
+    },
+    {
+      "default": "ai4 hao4",
+      "id": "aihao",
+      "note": "“爱好”的“好”读 hào。",
+      "readings": [
+        {
+          "note": "兴趣",
+          "pinyin": "ai4 hao4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "ai4 hao3",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "爱好"
+    },
+    {
+      "default": "hao4 qi2",
+      "id": "haoqi",
+      "note": "“好奇”的“好”读 hào。",
+      "readings": [
+        {
+          "note": "求知欲",
+          "pinyin": "hao4 qi2"
+        },
+        {
+          "note": "误读",
+          "pinyin": "hao3 qi2",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "好奇"
+    },
+    {
+      "default": "pian2 yi5",
+      "id": "pianyi",
+      "note": "“便宜”读 pián yi。",
+      "readings": [
+        {
+          "note": "价格低",
+          "pinyin": "pian2 yi5"
+        },
+        {
+          "note": "误读",
+          "pinyin": "bian4 yi2",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "便宜"
+    },
+    {
+      "default": "fang1 bian4",
+      "id": "fangbian",
+      "note": "“方便”的“便”读 biàn。",
+      "readings": [
+        {
+          "note": "便利",
+          "pinyin": "fang1 bian4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "fang1 pian2",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "方便"
+    },
+    {
+      "default": "chu3 li3",
+      "id": "chuli",
+      "note": "“处理”的“处”读 chǔ。",
+      "readings": [
+        {
+          "note": "办理",
+          "pinyin": "chu3 li3"
+        },
+        {
+          "note": "误读",
+          "pinyin": "chu4 li3",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "处理"
+    },
+    {
+      "default": "dao4 chu4",
+      "id": "daochu",
+      "note": "“到处”的“处”读 chù。",
+      "readings": [
+        {
+          "note": "各处",
+          "pinyin": "dao4 chu4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "dao4 chu3",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "到处"
+    },
+    {
+      "default": "xiang1 chu3",
+      "id": "xiangchu",
+      "note": "“相处”的“处”读 chǔ。",
+      "readings": [
+        {
+          "note": "交往",
+          "pinyin": "xiang1 chu3"
+        },
+        {
+          "note": "误读",
+          "pinyin": "xiang1 chu4",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "word",
+      "word": "相处"
+    },
+    {
+      "default": "jin3 guan3",
+      "id": "jinguan",
+      "note": "“尽管”的“尽”读 jǐn。",
+      "readings": [
+        {
+          "note": "虽然",
+          "pinyin": "jin3 guan3"
+        },
+        {
+          "note": "误读",
+          "pinyin": "jin4 guan3",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "尽管"
+    },
+    {
+      "default": "jin4 li4",
+      "id": "jinli",
+      "note": "“尽力”的“尽”读 jìn。",
+      "readings": [
+        {
+          "note": "用尽全力",
+          "pinyin": "jin4 li4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "jin3 li4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "尽力"
+    },
+    {
+      "default": "jin4 tou2",
+      "id": "jintou",
+      "note": "“尽头”的“尽”读 jìn。",
+      "readings": [
+        {
+          "note": "终点",
+          "pinyin": "jin4 tou2"
+        },
+        {
+          "note": "误读",
+          "pinyin": "jin3 tou2",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "word",
+      "word": "尽头"
+    },
+    {
+      "default": "kong1 tiao2",
+      "id": "kongtiao",
+      "note": "“空调”的“调”读 tiáo。",
+      "readings": [
+        {
+          "note": "空气调节",
+          "pinyin": "kong1 tiao2"
+        },
+        {
+          "note": "误读",
+          "pinyin": "kong1 diao4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "空调"
+    },
+    {
+      "default": "tiao2 zheng3",
+      "id": "tiaozheng",
+      "note": "“调整”的“调”读 tiáo。",
+      "readings": [
+        {
+          "note": "改动",
+          "pinyin": "tiao2 zheng3"
+        },
+        {
+          "note": "误读",
+          "pinyin": "diao4 zheng3",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "调整"
+    },
+    {
+      "default": "diao4 cha2",
+      "id": "diaocha",
+      "note": "“调查”的“调”读 diào。",
+      "readings": [
+        {
+          "note": "查证",
+          "pinyin": "diao4 cha2"
+        },
+        {
+          "note": "误读",
+          "pinyin": "tiao2 cha2",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "调查"
+    },
+    {
+      "default": "zhao2 huo3",
+      "id": "zhaohuo",
+      "note": "“着火”的“着”读 zháo。",
+      "readings": [
+        {
+          "note": "起火",
+          "pinyin": "zhao2 huo3"
+        },
+        {
+          "note": "误读",
+          "pinyin": "zhe5 huo3",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "着火"
+    },
+    {
+      "default": "zhao2 ji2",
+      "id": "zhaoji",
+      "note": "“着急”的“着”读 zháo。",
+      "readings": [
+        {
+          "note": "心急",
+          "pinyin": "zhao2 ji2"
+        },
+        {
+          "note": "误读",
+          "pinyin": "zhe5 ji2",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "着急"
+    },
+    {
+      "default": "kan4 zhe5",
+      "id": "kanzhe",
+      "note": "“看着”的“着”是轻声 zhe。",
+      "readings": [
+        {
+          "note": "正在看",
+          "pinyin": "kan4 zhe5"
+        },
+        {
+          "note": "误读",
+          "pinyin": "kan4 zhao2",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "word",
+      "word": "看着"
+    },
+    {
+      "default": "zhuo2 zhuang1",
+      "id": "zhuozhuang",
+      "note": "“着装”的“着”读 zhuó。",
+      "readings": [
+        {
+          "note": "服装",
+          "pinyin": "zhuo2 zhuang1"
+        },
+        {
+          "note": "误读",
+          "pinyin": "zhe5 zhuang1",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "word",
+      "word": "着装"
+    },
+    {
+      "default": "bo4 he5",
+      "id": "bohe",
+      "note": "“薄荷”读 bò he。",
+      "readings": [
+        {
+          "note": "植物",
+          "pinyin": "bo4 he5"
+        },
+        {
+          "note": "误读",
+          "pinyin": "bao4 he2",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "薄荷"
+    },
+    {
+      "default": "bo2 ruo4",
+      "id": "boruo",
+      "note": "“薄弱”的“薄”读 bó。",
+      "readings": [
+        {
+          "note": "不结实",
+          "pinyin": "bo2 ruo4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "bao2 ruo4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "薄弱"
+    },
+    {
+      "default": "dan1 bo2",
+      "id": "danbo",
+      "note": "“单薄”的“薄”读 bó。",
+      "readings": [
+        {
+          "note": "瘦弱/不厚",
+          "pinyin": "dan1 bo2"
+        },
+        {
+          "note": "误读",
+          "pinyin": "dan1 bao2",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "单薄"
+    },
+    {
+      "default": "mu2 yang4",
+      "id": "muyang",
+      "note": "“模样”的“模”读 mú。",
+      "readings": [
+        {
+          "note": "样子",
+          "pinyin": "mu2 yang4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "mo2 yang4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "模样"
+    },
+    {
+      "default": "mo2 xing2",
+      "id": "moxing",
+      "note": "“模型”的“模”读 mó。",
+      "readings": [
+        {
+          "note": "样板",
+          "pinyin": "mo2 xing2"
+        },
+        {
+          "note": "误读",
+          "pinyin": "mu2 xing2",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "模型"
+    },
+    {
+      "default": "mo2 fan4",
+      "id": "mofan",
+      "note": "“模范”的“模”读 mó。",
+      "readings": [
+        {
+          "note": "榜样",
+          "pinyin": "mo2 fan4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "mu2 fan4",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "word",
+      "word": "模范"
+    },
+    {
+      "default": "yao4 sai4",
+      "id": "yaosai",
+      "note": "“要塞”的“塞”读 sài。",
+      "readings": [
+        {
+          "note": "军事要地",
+          "pinyin": "yao4 sai4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "yao4 se4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "要塞"
+    },
+    {
+      "default": "sai1 che1",
+      "id": "saiche",
+      "note": "“塞车”的“塞”读 sāi。",
+      "readings": [
+        {
+          "note": "交通拥堵",
+          "pinyin": "sai1 che1"
+        },
+        {
+          "note": "误读",
+          "pinyin": "se4 che1",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "塞车"
+    },
+    {
+      "default": "du3 se4",
+      "id": "duse",
+      "note": "“堵塞”的“塞”读 sè。",
+      "readings": [
+        {
+          "note": "阻塞",
+          "pinyin": "du3 se4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "du3 sai1",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "堵塞"
+    },
+    {
+      "default": "ji3 yu3",
+      "id": "jiyu",
+      "note": "“给予”的“给”读 jǐ。",
+      "readings": [
+        {
+          "note": "提供",
+          "pinyin": "ji3 yu3"
+        },
+        {
+          "note": "误读",
+          "pinyin": "gei3 yu3",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "给予"
+    },
+    {
+      "default": "song4 gei3",
+      "id": "songgei",
+      "note": "“送给”的“给”读 gěi。",
+      "readings": [
+        {
+          "note": "赠予",
+          "pinyin": "song4 gei3"
+        },
+        {
+          "note": "误读",
+          "pinyin": "song4 ji3",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "送给"
+    },
+    {
+      "default": "gong1 ji3",
+      "id": "gongji",
+      "note": "“供给”的“给”读 jǐ。",
+      "readings": [
+        {
+          "note": "供应",
+          "pinyin": "gong1 ji3"
+        },
+        {
+          "note": "误读",
+          "pinyin": "gong1 gei3",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "供给"
+    },
+    {
+      "default": "ti2 gong1",
+      "id": "tigong",
+      "note": "“提供”的“供”读 gōng。",
+      "readings": [
+        {
+          "note": "供给",
+          "pinyin": "ti2 gong1"
+        },
+        {
+          "note": "误读",
+          "pinyin": "ti2 gong4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "提供"
+    },
+    {
+      "default": "chu3 nv3",
+      "id": "chunv",
+      "note": "“处女”的“处”读 chǔ。",
+      "readings": [
+        {
+          "note": "未经历者",
+          "pinyin": "chu3 nv3"
+        },
+        {
+          "note": "误读",
+          "pinyin": "chu4 nv3",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "word",
+      "word": "处女"
+    },
+    {
+      "default": "chao2 yang2 qu1",
+      "id": "chaoyangqu",
+      "note": "北京朝阳区读 cháo yáng。",
+      "readings": [
+        {
+          "note": "北京朝阳区",
+          "pinyin": "chao2 yang2 qu1"
+        },
+        {
+          "note": "误读",
+          "pinyin": "zhao1 yang2 qu1",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "place",
+      "word": "朝阳区"
+    },
+    {
+      "default": "chao2 yang2 shi4",
+      "id": "chaoyangshi",
+      "note": "辽宁朝阳市读 cháo yáng。",
+      "readings": [
+        {
+          "note": "辽宁朝阳市",
+          "pinyin": "chao2 yang2 shi4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "zhao1 yang2 shi4",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "place",
+      "word": "朝阳市"
+    },
+    {
+      "default": "zhao1 yang2",
+      "id": "chaoyang",
+      "note": "“朝阳”表示早晨的太阳读 zhāo yáng；北京朝阳区、辽宁朝阳市读 cháo yáng。",
+      "readings": [
+        {
+          "note": "早晨的太阳",
+          "pinyin": "zhao1 yang2"
+        },
+        {
+          "note": "地名或“朝向太阳”",
+          "pinyin": "chao2 yang2"
+        }
+      ],
+      "risk": "high",
+      "type": "word",
+      "word": "朝阳"
+    },
+    {
+      "default": "chan2 yu2",
+      "id": "danyu",
+      "note": "“单于”读 chán yú。",
+      "readings": [
+        {
+          "note": "匈奴首领称号",
+          "pinyin": "chan2 yu2"
+        },
+        {
+          "note": "误读",
+          "pinyin": "dan1 yu2",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "name",
+      "word": "单于"
+    },
+    {
+      "default": "ke4 han2",
+      "id": "kehan",
+      "note": "“可汗”读 kè hán。",
+      "readings": [
+        {
+          "note": "游牧民族首领称号",
+          "pinyin": "ke4 han2"
+        },
+        {
+          "note": "误读",
+          "pinyin": "ke3 han4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "name",
+      "word": "可汗"
+    },
+    {
+      "default": "qiu1 ci2",
+      "id": "qiuci",
+      "note": "“龟兹”读 qiū cí。",
+      "readings": [
+        {
+          "note": "古国名",
+          "pinyin": "qiu1 ci2"
+        },
+        {
+          "note": "误读",
+          "pinyin": "gui1 zi1",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "place",
+      "word": "龟兹"
+    },
+    {
+      "default": "tu3 bo1",
+      "id": "tubo",
+      "note": "“吐蕃”读 tǔ bō。",
+      "readings": [
+        {
+          "note": "古代政权",
+          "pinyin": "tu3 bo1"
+        },
+        {
+          "note": "误读",
+          "pinyin": "tu3 fan1",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "name",
+      "word": "吐蕃"
+    },
+    {
+      "default": "da4 yue4 zhi1",
+      "id": "dayueshi",
+      "note": "“大月氏”读 dà yuè zhī。",
+      "readings": [
+        {
+          "note": "古代民族",
+          "pinyin": "da4 yue4 zhi1"
+        },
+        {
+          "note": "误读",
+          "pinyin": "da4 yue4 shi4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "name",
+      "word": "大月氏"
+    },
+    {
+      "default": "gao1 li2",
+      "id": "gaoli",
+      "note": "“高丽”读 gāo lí。",
+      "readings": [
+        {
+          "note": "古代政权",
+          "pinyin": "gao1 li2"
+        },
+        {
+          "note": "误读",
+          "pinyin": "gao1 li4",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "name",
+      "word": "高丽"
+    },
+    {
+      "default": "chao2 xian3",
+      "id": "chaoxian",
+      "note": "“朝鲜”读 cháo xiǎn。",
+      "readings": [
+        {
+          "note": "国家/地区名",
+          "pinyin": "chao2 xian3"
+        },
+        {
+          "note": "误读",
+          "pinyin": "zhao1 xian1",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "place",
+      "word": "朝鲜"
+    },
+    {
+      "default": "e1 pang2 gong1",
+      "id": "efanggong",
+      "note": "“阿房宫”读 ē páng gōng。",
+      "readings": [
+        {
+          "note": "秦代宫殿",
+          "pinyin": "e1 pang2 gong1"
+        },
+        {
+          "note": "误读",
+          "pinyin": "a1 fang2 gong1",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "place",
+      "word": "阿房宫"
+    },
+    {
+      "default": "ne2 zha1",
+      "id": "nezha",
+      "note": "“哪吒”读 né zhā。",
+      "readings": [
+        {
+          "note": "神话人物",
+          "pinyin": "ne2 zha1"
+        },
+        {
+          "note": "误读",
+          "pinyin": "na3 zha1",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "name",
+      "word": "哪吒"
+    },
+    {
+      "default": "bo1 re3",
+      "id": "bore",
+      "note": "“般若”读 bō rě。",
+      "readings": [
+        {
+          "note": "佛教术语",
+          "pinyin": "bo1 re3"
+        },
+        {
+          "note": "误读",
+          "pinyin": "ban1 ruo4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "name",
+      "word": "般若"
+    },
+    {
+      "default": "a1 mi2 tuo2 fo2",
+      "id": "amituofo",
+      "note": "“阿弥陀佛”读 ā mí tuó fó。",
+      "readings": [
+        {
+          "note": "佛号",
+          "pinyin": "a1 mi2 tuo2 fo2"
+        },
+        {
+          "note": "误读",
+          "pinyin": "e1 mi2 tuo2 fo2",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "name",
+      "word": "阿弥陀佛"
+    },
+    {
+      "default": "yu4 chi2",
+      "id": "yuchi",
+      "note": "“尉迟”是复姓，读 yù chí。",
+      "readings": [
+        {
+          "note": "复姓",
+          "pinyin": "yu4 chi2"
+        },
+        {
+          "note": "误读",
+          "pinyin": "wei4 chi2",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "surname",
+      "word": "尉迟"
+    },
+    {
+      "default": "mo4 qi2",
+      "id": "moqi",
+      "note": "“万俟”是复姓，读 mò qí。",
+      "readings": [
+        {
+          "note": "复姓",
+          "pinyin": "mo4 qi2"
+        },
+        {
+          "note": "误读",
+          "pinyin": "wan4 si4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "surname",
+      "word": "万俟"
+    },
+    {
+      "default": "tan2 tai2",
+      "id": "tantai",
+      "note": "“澹台”是复姓，读 tán tái。",
+      "readings": [
+        {
+          "note": "复姓",
+          "pinyin": "tan2 tai2"
+        },
+        {
+          "note": "误读",
+          "pinyin": "dan4 tai2",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "surname",
+      "word": "澹台"
+    },
+    {
+      "default": "gao1 yao2",
+      "id": "gaoyao",
+      "note": "“皋陶”读 gāo yáo。",
+      "readings": [
+        {
+          "note": "上古人物",
+          "pinyin": "gao1 yao2"
+        },
+        {
+          "note": "误读",
+          "pinyin": "gao1 tao2",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "name",
+      "word": "皋陶"
+    },
+    {
+      "default": "nv3 wa1",
+      "id": "nvwa",
+      "note": "“女娲”读 nǚ wā。",
+      "readings": [
+        {
+          "note": "神话人物",
+          "pinyin": "nv3 wa1"
+        },
+        {
+          "note": "误读",
+          "pinyin": "nv3 wo1",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "name",
+      "word": "女娲"
+    },
+    {
+      "default": "pan1 yu2",
+      "id": "fanyu",
+      "note": "“番禺”读 pān yú。",
+      "readings": [
+        {
+          "note": "广州番禺区",
+          "pinyin": "pan1 yu2"
+        },
+        {
+          "note": "误读",
+          "pinyin": "fan1 yu2",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "place",
+      "word": "番禺"
+    },
+    {
+      "default": "lu4 an1",
+      "id": "luan",
+      "note": "安徽六安读 lù ān。",
+      "readings": [
+        {
+          "note": "安徽六安",
+          "pinyin": "lu4 an1"
+        },
+        {
+          "note": "误读",
+          "pinyin": "liu4 an1",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "place",
+      "word": "六安"
+    },
+    {
+      "default": "beng4 bu4",
+      "id": "bengbu",
+      "note": "“蚌埠”读 bèng bù。",
+      "readings": [
+        {
+          "note": "安徽蚌埠",
+          "pinyin": "beng4 bu4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "bang4 fu4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "place",
+      "word": "蚌埠"
+    },
+    {
+      "default": "bo2 zhou1",
+      "id": "bozhou",
+      "note": "“亳州”读 bó zhōu。",
+      "readings": [
+        {
+          "note": "安徽亳州",
+          "pinyin": "bo2 zhou1"
+        },
+        {
+          "note": "误读",
+          "pinyin": "hao2 zhou1",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "place",
+      "word": "亳州"
+    },
+    {
+      "default": "li2 shui3",
+      "id": "lishui",
+      "note": "浙江丽水读 lí shuǐ。",
+      "readings": [
+        {
+          "note": "浙江丽水",
+          "pinyin": "li2 shui3"
+        },
+        {
+          "note": "误读",
+          "pinyin": "li4 shui3",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "place",
+      "word": "丽水"
+    },
+    {
+      "default": "tai1 zhou1",
+      "id": "taizhou",
+      "note": "浙江台州读 tāi zhōu。",
+      "readings": [
+        {
+          "note": "浙江台州",
+          "pinyin": "tai1 zhou1"
+        },
+        {
+          "note": "误读",
+          "pinyin": "tai2 zhou1",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "place",
+      "word": "台州"
+    },
+    {
+      "default": "yue4 qing1",
+      "id": "leqing",
+      "note": "浙江乐清读 yuè qīng。",
+      "readings": [
+        {
+          "note": "浙江乐清",
+          "pinyin": "yue4 qing1"
+        },
+        {
+          "note": "误读",
+          "pinyin": "le4 qing1",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "place",
+      "word": "乐清"
+    },
+    {
+      "default": "yu4 xian4",
+      "id": "weixian",
+      "note": "河北蔚县读 yù xiàn。",
+      "readings": [
+        {
+          "note": "河北蔚县",
+          "pinyin": "yu4 xian4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "wei4 xian4",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "place",
+      "word": "蔚县"
+    },
+    {
+      "default": "gou1 rong2",
+      "id": "jurong",
+      "note": "江苏句容读 gōu róng。",
+      "readings": [
+        {
+          "note": "江苏句容",
+          "pinyin": "gou1 rong2"
+        },
+        {
+          "note": "误读",
+          "pinyin": "ju4 rong2",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "place",
+      "word": "句容"
+    },
+    {
+      "default": "bi4 lu3",
+      "id": "bilu",
+      "note": "“秘鲁”读 bì lǔ。",
+      "readings": [
+        {
+          "note": "国家名",
+          "pinyin": "bi4 lu3"
+        },
+        {
+          "note": "误读",
+          "pinyin": "mi4 lu3",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "place",
+      "word": "秘鲁"
+    },
+    {
+      "default": "bo2 lin2",
+      "id": "bolin",
+      "note": "“柏林”读 bó lín。",
+      "readings": [
+        {
+          "note": "德国首都",
+          "pinyin": "bo2 lin2"
+        },
+        {
+          "note": "误读",
+          "pinyin": "bai3 lin2",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "place",
+      "word": "柏林"
+    },
+    {
+      "default": "xia4 men2",
+      "id": "xiamen",
+      "note": "“厦门”读 xià mén。",
+      "readings": [
+        {
+          "note": "福建厦门",
+          "pinyin": "xia4 men2"
+        },
+        {
+          "note": "误读",
+          "pinyin": "sha4 men2",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "place",
+      "word": "厦门"
+    },
+    {
+      "default": "dong1 guan3",
+      "id": "dongguan",
+      "note": "“东莞”读 dōng guǎn。",
+      "readings": [
+        {
+          "note": "广东东莞",
+          "pinyin": "dong1 guan3"
+        },
+        {
+          "note": "误读",
+          "pinyin": "dong1 wan3",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "place",
+      "word": "东莞"
+    },
+    {
+      "default": "shan4 tou2",
+      "id": "shantou",
+      "note": "“汕头”读 shàn tóu。",
+      "readings": [
+        {
+          "note": "广东汕头",
+          "pinyin": "shan4 tou2"
+        },
+        {
+          "note": "误读",
+          "pinyin": "shan1 tou2",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "place",
+      "word": "汕头"
+    },
+    {
+      "default": "fo2 shan1",
+      "id": "foshan",
+      "note": "“佛山”读 fó shān。",
+      "readings": [
+        {
+          "note": "广东佛山",
+          "pinyin": "fo2 shan1"
+        },
+        {
+          "note": "误读",
+          "pinyin": "fu2 shan1",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "place",
+      "word": "佛山"
+    },
+    {
+      "default": "zhao4 qing4",
+      "id": "zhaoqing",
+      "note": "“肇庆”读 zhào qìng。",
+      "readings": [
+        {
+          "note": "广东肇庆",
+          "pinyin": "zhao4 qing4"
+        },
+        {
+          "note": "误读",
+          "pinyin": "shao4 qing4",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "place",
+      "word": "肇庆"
+    },
+    {
+      "default": "zeng1",
+      "id": "zeng_surname",
+      "note": "姓氏“曾”读 zēng；“曾经”读 céng。",
+      "pattern": "曾(?=先生|女士|老师|总|同学|阿姨|叔叔|医生|律师|经理|主任|教授|师傅|大姐|大哥)",
+      "readings": [
+        {
+          "note": "姓氏",
+          "pinyin": "zeng1"
+        },
+        {
+          "note": "“曾经”的读法",
+          "pinyin": "ceng2",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "surname",
+      "word": "曾"
+    },
+    {
+      "default": "xie4",
+      "id": "xie_surname",
+      "note": "姓氏“解”读 xiè；“解决”读 jiě。",
+      "pattern": "解(?=先生|女士|老师|总|同学|阿姨|叔叔|医生|律师|经理|主任|教授|师傅|大姐|大哥)",
+      "readings": [
+        {
+          "note": "姓氏",
+          "pinyin": "xie4"
+        },
+        {
+          "note": "“解决”的读法",
+          "pinyin": "jie3",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "surname",
+      "word": "解"
+    },
+    {
+      "default": "zha1",
+      "id": "zha_surname",
+      "note": "姓氏“查”读 zhā；“检查”读 chá。",
+      "pattern": "查(?=先生|女士|老师|总|同学|阿姨|叔叔|医生|律师|经理|主任|教授|师傅|大姐|大哥)",
+      "readings": [
+        {
+          "note": "姓氏",
+          "pinyin": "zha1"
+        },
+        {
+          "note": "“检查”的读法",
+          "pinyin": "cha2",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "surname",
+      "word": "查"
+    },
+    {
+      "default": "qiu2",
+      "id": "qiu_surname",
+      "note": "姓氏“仇”读 qiú；“仇恨”读 chóu。",
+      "pattern": "仇(?=先生|女士|老师|总|同学|阿姨|叔叔|医生|律师|经理|主任|教授|师傅|大姐|大哥)",
+      "readings": [
+        {
+          "note": "姓氏",
+          "pinyin": "qiu2"
+        },
+        {
+          "note": "“仇恨”的读法",
+          "pinyin": "chou2",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "surname",
+      "word": "仇"
+    },
+    {
+      "default": "piao2",
+      "id": "piao_surname",
+      "note": "姓氏“朴”读 piáo；“朴素”读 pǔ。",
+      "pattern": "朴(?=先生|女士|老师|总|同学|阿姨|叔叔|医生|律师|经理|主任|教授|师傅|大姐|大哥)",
+      "readings": [
+        {
+          "note": "姓氏",
+          "pinyin": "piao2"
+        },
+        {
+          "note": "“朴素”的读法",
+          "pinyin": "pu3",
+          "wrong": true
+        }
+      ],
+      "risk": "high",
+      "type": "surname",
+      "word": "朴"
+    },
+    {
+      "default": "ou1",
+      "id": "ou_surname",
+      "note": "姓氏“区”读 ōu；“地区”读 qū。",
+      "pattern": "区(?=先生|女士|老师|总|同学|阿姨|叔叔|医生|律师|经理|主任|教授|师傅|大姐|大哥)",
+      "readings": [
+        {
+          "note": "姓氏",
+          "pinyin": "ou1"
+        },
+        {
+          "note": "“地区”的读法",
+          "pinyin": "qu1",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "surname",
+      "word": "区"
+    },
+    {
+      "default": "hua4",
+      "id": "hua_surname",
+      "note": "姓氏“华”读 huà；“中华”读 huá。",
+      "pattern": "华(?=先生|女士|老师|总|同学|阿姨|叔叔|医生|律师|经理|主任|教授|师傅|大姐|大哥)",
+      "readings": [
+        {
+          "note": "姓氏",
+          "pinyin": "hua4"
+        },
+        {
+          "note": "“中华”的读法",
+          "pinyin": "hua2",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "surname",
+      "word": "华"
+    },
+    {
+      "default": "ren2",
+      "id": "ren_surname",
+      "note": "姓氏“任”读 rén；“任务”读 rèn。",
+      "pattern": "任(?=先生|女士|老师|总|同学|阿姨|叔叔|医生|律师|经理|主任|教授|师傅|大姐|大哥)",
+      "readings": [
+        {
+          "note": "姓氏",
+          "pinyin": "ren2"
+        },
+        {
+          "note": "“任务”的读法",
+          "pinyin": "ren4",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "surname",
+      "word": "任"
+    },
+    {
+      "default": "yan1",
+      "id": "yan_surname",
+      "note": "姓氏“燕”读 yān；“燕子”读 yàn。",
+      "pattern": "燕(?=先生|女士|老师|总|同学|阿姨|叔叔|医生|律师|经理|主任|教授|师傅|大姐|大哥)",
+      "readings": [
+        {
+          "note": "姓氏",
+          "pinyin": "yan1"
+        },
+        {
+          "note": "“燕子”的读法",
+          "pinyin": "yan4",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "surname",
+      "word": "燕"
+    },
+    {
+      "default": "ji3",
+      "id": "ji_surname",
+      "note": "姓氏“纪”读 jǐ；“纪律”读 jì。",
+      "pattern": "纪(?=先生|女士|老师|总|同学|阿姨|叔叔|医生|律师|经理|主任|教授|师傅|大姐|大哥)",
+      "readings": [
+        {
+          "note": "姓氏",
+          "pinyin": "ji3"
+        },
+        {
+          "note": "“纪律”的读法",
+          "pinyin": "ji4",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "surname",
+      "word": "纪"
+    },
+    {
+      "default": "guo1",
+      "id": "guo_surname",
+      "note": "姓氏“过”读 guō；“经过”读 guò。",
+      "pattern": "过(?=先生|女士|老师|总|同学|阿姨|叔叔|医生|律师|经理|主任|教授|师傅|大姐|大哥)",
+      "readings": [
+        {
+          "note": "姓氏",
+          "pinyin": "guo1"
+        },
+        {
+          "note": "“经过”的读法",
+          "pinyin": "guo4",
+          "wrong": true
+        }
+      ],
+      "risk": "medium",
+      "type": "surname",
+      "word": "过"
+    }
+  ],
+  "updated": "2026-10-28",
+  "version": "0.1.0"
+}

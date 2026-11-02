@@ -1,0 +1,12 @@
+preview*.png
+dom-preview.html
+*.log
+.env
+bin/
+.tools/
+*.exe
+*.zip
+.DS_Store
+Thumbs.db
+coverage.*
+coverage

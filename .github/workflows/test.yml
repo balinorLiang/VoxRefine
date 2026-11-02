@@ -1,0 +1,48 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: polyphone
+          POSTGRES_PASSWORD: polyphone
+          POSTGRES_DB: polyphone
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U polyphone -d polyphone"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      GOTOOLCHAIN: local
+      TEST_DATABASE_URL: postgres://polyphone:polyphone@127.0.0.1:5432/polyphone?sslmode=disable
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+      - name: Test with race detector and coverage
+        run: go test -race -covermode=atomic -coverprofile coverage.out ./...
+      - name: Show coverage summary
+        run: go tool cover -func coverage.out | tail -n 1
+      - name: Vet
+        run: go vet ./...
+      - name: Check formatting
+        run: |
+          files="$(gofmt -l .)"
+          if [ -n "$files" ]; then
+            echo "$files"
+            exit 1
+          fi

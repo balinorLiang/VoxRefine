@@ -1,0 +1,61 @@
+name: 多音字错读案例
+description: 提交一个 AI 配音读错的多音字、地名、姓氏或专名
+title: "[错读] "
+labels: ["case", "glossary"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！请尽量提供上下文和音频。一个可复核的案例，比十个“感觉读错了”更有价值。
+  - type: input
+    id: word
+    attributes:
+      label: 读错的词
+      placeholder: 重庆
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: 上下文
+      description: 复制包含该词的整句，不要只写一个词。
+      placeholder: 欢迎来到重庆。
+    validations:
+      required: true
+  - type: input
+    id: wrong
+    attributes:
+      label: 实际读音
+      placeholder: zhòng qìng
+  - type: input
+    id: correct
+    attributes:
+      label: 正确读音
+      placeholder: chóng qìng
+    validations:
+      required: true
+  - type: input
+    id: engine
+    attributes:
+      label: TTS 引擎/音色
+      placeholder: 剪映 / 讯飞智作 / 腾讯云 / CosyVoice 3
+  - type: input
+    id: audio
+    attributes:
+      label: 音频链接（可选）
+      description: 5–20 秒片段即可；也可以直接拖到 Issue 里。
+  - type: textarea
+    id: case_json
+    attributes:
+      label: 案例 JSON（可选）
+      description: v2 可直接在网页案例库提交；如果使用轻量静态版，可粘贴检查结果或案例 JSON。
+      render: json
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 确认
+      options:
+        - label: 我确认这是读音问题，不是音质、断句或背景音问题
+          required: true
+        - label: 我同意将该案例用于公开词库和评测
+          required: true

@@ -1,0 +1,246 @@
+{
+    "generated_at":  "2026-10-30 19:05:24 +08:00",
+    "base_url":  "http://192.168.21.145:8080",
+    "total":  33,
+    "passed":  33,
+    "failed":  0,
+    "results":  [
+                    {
+                        "test":  "\u5065\u5EB7\u68C0\u67E5",
+                        "expected":  "200 / status=ok / database=ok",
+                        "actual":  "200",
+                        "pass":  true,
+                        "detail":  "{\"database\":\"ok\",\"status\":\"ok\",\"version\":\"2.0.0\"}\n"
+                    },
+                    {
+                        "test":  "\u8BCD\u5E93\u7EDF\u8BA1",
+                        "expected":  "200 / terms=121",
+                        "actual":  "200 / terms=121",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u8BCD\u6761\u641C\u7D22-\u91CD\u5E86",
+                        "expected":  "200 / total=1 / default=chong2 qing4",
+                        "actual":  "200 / total=1",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u8BCD\u6761\u8BE6\u60C5",
+                        "expected":  "200 / word=\u91CD\u5E86",
+                        "actual":  "200 / word=\u91CD\u5E86",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u591A\u97F3\u5B57\u68C0\u6D4B",
+                        "expected":  "200 / total=5 / first=\u91CD\u5E86",
+                        "actual":  "200 / total=5 / first=\u91CD\u5E86",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u7BA1\u7406\u5458\u6CE8\u518C\u4E0E\u767B\u5F55\u6001",
+                        "expected":  "201 / admin / HttpOnly+SameSite=Lax",
+                        "actual":  "201 / role=admin",
+                        "pass":  true,
+                        "detail":  "[\u6D4B\u8BD5\u4F1A\u8BDD Cookie \u5DF2\u8131\u654F\uFF0C\u4E14\u4F1A\u8BDD\u5DF2\u5220\u9664]"
+                    },
+                    {
+                        "test":  "\u5F53\u524D\u7528\u6237\u4F1A\u8BDD",
+                        "expected":  "200 / admin",
+                        "actual":  "200 / deploy-verify-admin@example.invalid",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u63D0\u4EA4\u5F85\u5BA1\u6838\u6848\u4F8B",
+                        "expected":  "201 / pending",
+                        "actual":  "201 / status=pending",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u6211\u7684\u6295\u7A3F",
+                        "expected":  "200 / \u5305\u542B\u65B0\u6848\u4F8B / pending",
+                        "actual":  "200 / count=1",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u5F85\u5BA1\u6838\u6848\u4F8B\u4E0D\u516C\u5F00",
+                        "expected":  "200 / \u4E0D\u5305\u542B\u5F85\u5BA1\u6838\u6848\u4F8B",
+                        "actual":  "200 / visible=False",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u7BA1\u7406\u5458\u5BA1\u6838\u961F\u5217",
+                        "expected":  "200 / \u5305\u542B\u65B0\u6848\u4F8B",
+                        "actual":  "200 / visible=True",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u666E\u901A\u7528\u6237\u6CE8\u518C",
+                        "expected":  "201 / user",
+                        "actual":  "201 / role=user",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u666E\u901A\u7528\u6237\u8D8A\u6743\u62E6\u622A",
+                        "expected":  "403",
+                        "actual":  "403",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u5F85\u5BA1\u6838\u6848\u4F8B\u7981\u6B62\u6295\u7968",
+                        "expected":  "404",
+                        "actual":  "404",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u7BA1\u7406\u5458\u5BA1\u6838\u901A\u8FC7",
+                        "expected":  "200 / approved",
+                        "actual":  "200 / approved",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u5DF2\u5BA1\u6838\u6848\u4F8B\u516C\u5F00",
+                        "expected":  "200 / \u5305\u542B\u5DF2\u901A\u8FC7\u6848\u4F8B",
+                        "actual":  "200 / visible=True",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u6848\u4F8B\u6295\u7968",
+                        "expected":  "200 / votes=1 / voted=true",
+                        "actual":  "200 / votes=1",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u53D6\u6D88\u6295\u7968",
+                        "expected":  "200 / votes=0 / voted=false",
+                        "actual":  "200 / votes=0",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u5DF2\u767B\u5F55\u6295\u7A3F",
+                        "expected":  "201 / pending",
+                        "actual":  "201 / pending",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u672A\u767B\u5F55\u5199\u64CD\u4F5C\u62E6\u622A",
+                        "expected":  "401",
+                        "actual":  "401",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u91CD\u590D\u90AE\u7BB1\u6CE8\u518C",
+                        "expected":  "409",
+                        "actual":  "409",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u9519\u8BEF\u5BC6\u7801\u767B\u5F55",
+                        "expected":  "401",
+                        "actual":  "401",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u8DE8\u7AD9 Origin \u62E6\u622A",
+                        "expected":  "403",
+                        "actual":  "403",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u672A\u77E5 JSON \u5B57\u6BB5\u62D2\u7EDD",
+                        "expected":  "400",
+                        "actual":  "400",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u7A7A\u6587\u672C\u62D2\u7EDD",
+                        "expected":  "400",
+                        "actual":  "400",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u975E\u6CD5\u8BCD\u6761\u7C7B\u578B\u62D2\u7EDD",
+                        "expected":  "400",
+                        "actual":  "400",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u8D85\u957F\u6587\u672C\u9650\u5236",
+                        "expected":  "413",
+                        "actual":  "413",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u9000\u51FA\u767B\u5F55",
+                        "expected":  "200 / user=null",
+                        "actual":  "200 / user=",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u91CD\u65B0\u767B\u5F55",
+                        "expected":  "200 / admin",
+                        "actual":  "200 / role=admin",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u5B89\u5168\u54CD\u5E94\u5934",
+                        "expected":  "CSP/nosniff/DENY/Referrer/Permissions/CORP",
+                        "actual":  "all-present",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u9ED8\u8BA4\u4E0D\u5F00\u653E\u8DE8\u57DF CORS",
+                        "expected":  "\u65E0 CORS \u5141\u8BB8\u5934",
+                        "actual":  "cors=False",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u987A\u5E8F\u68C0\u6D4B\u5EF6\u8FDF",
+                        "expected":  "10 \u6B21\u5747\u8FD4\u56DE 200",
+                        "actual":  "n=10 avg=6.9ms min=6.1ms max=7.6ms",
+                        "pass":  true,
+                        "detail":  ""
+                    },
+                    {
+                        "test":  "\u68C0\u6D4B\u63A5\u53E3\u9650\u6D41",
+                        "expected":  "\u51FA\u73B0 429",
+                        "actual":  "200,429",
+                        "pass":  true,
+                        "detail":  "requests=5"
+                    }
+                ],
+    "performance":  {
+                        "samples":  10,
+                        "avg_ms":  6.9,
+                        "min_ms":  6.1,
+                        "max_ms":  7.6
+                    }
+}

@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>多音字检查器 v2 · 先检查，再配音</title>
+  <meta name="description" content="面向 AI 配音和短视频创作的中文多音字检查器。服务端检查、词库共建、真实案例库。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="返回首页">
+      <span class="brand-mark" aria-hidden="true">音</span>
+      <span class="brand-text">
+        <strong>多音字检查器</strong>
+        <small>v2 · 词库与案例共建</small>
+      </span>
+    </a>
+    <nav class="header-nav" aria-label="站点导航">
+      <div class="main-nav" role="tablist" aria-label="主要页面">
+        <button class="nav-link is-active" type="button" data-view="checker" role="tab" aria-selected="true">检查</button>
+        <button class="nav-link" type="button" data-view="glossary" role="tab" aria-selected="false">词库</button>
+        <button class="nav-link" type="button" data-view="cases" role="tab" aria-selected="false">案例</button>
+        <button class="nav-link" type="button" data-view="about" role="tab" aria-selected="false">关于</button>
+      </div>
+      <div class="account-area" id="account-area">
+        <span class="privacy-badge">服务端检查 · 不存原文</span>
+        <button class="btn btn-ghost btn-small" type="button" id="login-button">登录</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="view is-active" id="view-checker">
+      <section class="hero">
+        <p class="eyebrow">先检查，再配音</p>
+        <h1>别让 AI 把「重庆」<br>读成 <span class="wrong-reading">zhòng qìng</span></h1>
+        <p class="hero-copy">粘贴文案或导入 SRT，服务端词库自动标出高风险多音字，给出读音候选和可复制的 SSML。原文只在本次请求中处理，不写入数据库。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#checker">开始检查</a>
+          <button class="btn btn-ghost" type="button" id="load-example">载入示例</button>
+        </div>
+        <ul class="hero-points" aria-label="产品特点">
+          <li>词库持续共建</li>
+          <li>账号同步案例</li>
+          <li>支持 SSML 导出</li>
+        </ul>
+      </section>
+
+      <section class="workspace" id="checker">
+        <div class="panel editor-panel">
+          <div class="panel-head">
+            <div>
+              <h2>你的文案</h2>
+              <p id="draft-status">草稿自动保存在本机</p>
+            </div>
+            <div class="editor-actions">
+              <label class="file-button">
+                导入 SRT/TXT
+                <input type="file" id="file-input" accept=".srt,.txt,text/plain" hidden>
+              </label>
+              <button class="text-button" type="button" id="clear-text">清空</button>
+            </div>
+          </div>
+          <textarea id="script-input" spellcheck="false" placeholder="把 AI 配音文案粘贴到这里，例如：&#10;欢迎来到重庆。我们公司在银行行业工作，行长今天出差了。"></textarea>
+          <div class="editor-footer">
+            <span id="char-count">0 字</span>
+            <div class="editor-footer-actions">
+              <span class="keyboard-hint">Ctrl / ⌘ + Enter</span>
+              <button class="btn btn-primary" type="button" id="check-button">检查多音字</button>
+            </div>
+          </div>
+        </div>
+
+        <aside class="panel result-panel">
+          <div class="result-panel-head">
+            <div>
+              <h2>检查结果</h2>
+              <p>按风险排序，逐条确认读音</p>
+            </div>
+            <span class="engine-badge" id="engine-badge">v2 服务端词库</span>
+          </div>
+          <div class="summary" id="summary">
+            <div class="summary-number" id="summary-count">0</div>
+            <div class="summary-copy">
+              <strong>处待确认读音</strong>
+              <span id="summary-detail">粘贴文案后点击检查</span>
+            </div>
+          </div>
+          <div class="result-toolbar" id="result-toolbar" hidden>
+            <button class="text-button" type="button" id="accept-all">全部采用建议</button>
+            <button class="text-button" type="button" id="reset-all">重置选择</button>
+          </div>
+          <div class="matches" id="matches"></div>
+          <div class="empty-state" id="empty-state">
+            <div class="empty-icon" aria-hidden="true">⌕</div>
+            <p>还没有检查结果</p>
+            <span>粘贴文案，或先载入一段示例。</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="panel export-panel" id="export-panel">
+        <div class="panel-head">
+          <div>
+            <h2>导出修正稿</h2>
+            <p>选好读音后，复制标注稿或直接生成 SSML。</p>
+          </div>
+          <div class="export-actions">
+            <button class="btn btn-ghost btn-small" type="button" id="copy-export">复制</button>
+            <button class="btn btn-ghost btn-small" type="button" id="download-export">下载</button>
+          </div>
+        </div>
+        <div class="export-tabs" role="tablist" aria-label="导出格式">
+          <button class="export-tab is-active" type="button" data-export="annotated">标注稿</button>
+          <button class="export-tab" type="button" data-export="tencent">腾讯云 SSML</button>
+          <button class="export-tab" type="button" data-export="baidu">百度 SSML</button>
+        </div>
+        <pre class="export-output" id="export-output" aria-live="polite">检查后，这里会生成可复制的修正稿。</pre>
+        <p class="export-hint" id="export-hint"></p>
+      </section>
+
+      <section class="info-grid">
+        <article class="info-card">
+          <h3>为什么需要账号？</h3>
+          <p>检查不需要登录。登录后可以提交真实错读案例、给案例投票，并保留自己的投稿记录，方便词库维护者审核。</p>
+        </article>
+        <article class="info-card">
+          <h3>原文会被保存吗？</h3>
+          <p>不会。检查接口只在内存里处理文本，不把原文写入数据库；数据库保存的是词条、案例和账号信息。</p>
+        </article>
+        <article class="info-card">
+          <h3>还想要零依赖版本？</h3>
+          <p>静态版仍然保留在 <a href="/lite/">/lite/</a>，可单独部署到 Cloudflare Pages、Netlify 或 GitHub Pages，不需要数据库。</p>
+        </article>
+      </section>
+    </section>
+
+    <section class="view" id="view-glossary">
+      <div class="page-head">
+        <div>
+          <p class="eyebrow">Glossary</p>
+          <h1>共建词库</h1>
+          <p>词条存储在 PostgreSQL 中，支持按词语、拼音、说明搜索。发现漏词或误报，可以到案例库提交。</p>
+        </div>
+        <span class="page-meta" id="glossary-count">加载中…</span>
+      </div>
+      <div class="panel glossary-panel">
+        <div class="glossary-toolbar">
+          <input type="search" id="glossary-search" placeholder="搜索词语、拼音或说明…" autocomplete="off">
+          <select id="glossary-type" aria-label="词条类型">
+            <option value="">全部类型</option>
+            <option value="place">地名</option>
+            <option value="surname">姓氏</option>
+            <option value="word">词语</option>
+            <option value="name">专名</option>
+            <option value="idiom">成语</option>
+            <option value="brand">品牌</option>
+          </select>
+          <select id="glossary-risk" aria-label="风险等级">
+            <option value="">全部风险</option>
+            <option value="high">高风险</option>
+            <option value="medium">中风险</option>
+          </select>
+        </div>
+        <div class="glossary-list" id="glossary-list"></div>
+      </div>
+    </section>
+
+    <section class="view" id="view-cases">
+      <div class="page-head">
+        <div>
+          <p class="eyebrow">Case Library</p>
+          <h1>真实错读案例</h1>
+          <p>把 AI 配音里遇到的真实错误记下来。审核通过后，其他人可以投票确认，词库维护者据此补词。</p>
+        </div>
+        <button class="btn btn-primary" type="button" id="jump-case-form">提交案例</button>
+      </div>
+      <div class="stats-row" id="stats-row"></div>
+      <div class="cases-layout">
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>案例库</h2>
+              <p>按提交时间倒序</p>
+            </div>
+            <button class="text-button" type="button" id="refresh-cases">刷新</button>
+          </div>
+          <div class="cases-list" id="cases-list"></div>
+        </div>
+        <aside class="panel case-form-panel" id="case-form-panel">
+          <div class="panel-head">
+            <div>
+              <h2>提交一个案例</h2>
+              <p>登录后提交，进入待审核队列</p>
+            </div>
+          </div>
+          <form id="case-form" novalidate>
+            <label class="field">
+              <span>关联词条（可选）</span>
+              <select id="case-term">
+                <option value="">不关联，提交新词</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>错误文本或上下文</span>
+              <textarea id="case-wrong" rows="3" maxlength="500" placeholder="例如：视频里把「重庆」读成了 zhòng qìng"></textarea>
+            </label>
+            <label class="field">
+              <span>正确读音</span>
+              <input id="case-pinyin" type="text" maxlength="100" placeholder="例如：chong2 qing4">
+            </label>
+            <label class="field">
+              <span>补充说明（可选）</span>
+              <textarea id="case-note" rows="3" maxlength="1000" placeholder="使用的 TTS、出现位置、参考来源等"></textarea>
+            </label>
+            <p class="form-status" id="case-form-status"></p>
+            <button class="btn btn-primary btn-block" type="submit" id="case-submit">提交待审核</button>
+          </form>
+        </aside>
+      </div>
+
+      <section class="panel admin-panel" id="admin-panel" hidden>
+        <div class="panel-head">
+          <div>
+            <h2>审核队列</h2>
+            <p>只有管理员和审核员可见</p>
+          </div>
+          <select id="admin-status" aria-label="审核状态">
+            <option value="pending">待审核</option>
+            <option value="approved">已通过</option>
+            <option value="rejected">已拒绝</option>
+            <option value="all">全部</option>
+          </select>
+        </div>
+        <div class="cases-list" id="admin-list"></div>
+      </section>
+    </section>
+
+    <section class="view" id="view-about">
+      <div class="page-head">
+        <div>
+          <p class="eyebrow">About v2</p>
+          <h1>为什么从静态站升级到前后端</h1>
+          <p>静态版解决“打开就能用”，v2 解决“词库和案例可以持续沉淀”。两者不是替代关系。</p>
+        </div>
+      </div>
+      <div class="about-grid">
+        <article class="panel about-card">
+          <h2>v2 架构</h2>
+          <ul class="about-list">
+            <li>Go 标准库 HTTP 服务，单二进制部署</li>
+            <li>PostgreSQL 存储词条、读音、账号、案例和投票</li>
+            <li>原生 HTML/CSS/JS 前端，无 Node 构建步骤</li>
+            <li>服务端检查接口，词库更新后全站立即生效</li>
+            <li>静态轻量版保留在 <a href="/lite/">/lite/</a></li>
+          </ul>
+        </article>
+        <article class="panel about-card">
+          <h2>安全边界</h2>
+          <ul class="about-list">
+            <li>密码使用 bcrypt 哈希，会话 Cookie 为 HttpOnly + SameSite=Lax</li>
+            <li>所有 SQL 使用参数化查询，写操作做同源检查</li>
+            <li>登录、注册、检查和投稿都有独立的速率限制</li>
+            <li>检查原文不落库，数据库只保存词条和案例</li>
+            <li>生产环境请开启 HTTPS，并设置 <code>COOKIE_SECURE=true</code></li>
+          </ul>
+        </article>
+        <article class="panel about-card">
+          <h2>下一步</h2>
+          <ul class="about-list">
+            <li>词条后台编辑与审核日志</li>
+            <li>案例评论、标签和重复合并</li>
+            <li>单句修复流水线：TTS 重新合成 + FFmpeg 替换音轨</li>
+            <li>可选的 Supabase/对象存储社区层</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>多音字检查器</strong>
+      <span>v2.0.0 · Go + PostgreSQL · 开源共建</span>
+    </div>
+    <div class="footer-links">
+      <a href="/lite/">轻量静态版</a>
+      <a class="js-repo-link" href="#" target="_blank" rel="noreferrer" hidden>GitHub</a>
+    </div>
+  </footer>
+
+  <dialog class="auth-dialog" id="auth-dialog">
+    <button class="dialog-close" type="button" id="close-auth" aria-label="关闭">×</button>
+    <div class="auth-head">
+      <p class="eyebrow">Account</p>
+      <h2 id="auth-title">登录</h2>
+      <p>登录后可以提交案例和投票。检查功能始终免登录。</p>
+    </div>
+    <div class="auth-tabs" role="tablist">
+      <button class="auth-tab is-active" type="button" data-auth-mode="login">登录</button>
+      <button class="auth-tab" type="button" data-auth-mode="register">注册</button>
+    </div>
+    <form id="login-form" class="auth-form" novalidate>
+      <label class="field"><span>邮箱</span><input id="login-email" type="email" autocomplete="email" required></label>
+      <label class="field"><span>密码</span><input id="login-password" type="password" autocomplete="current-password" required></label>
+      <button class="btn btn-primary btn-block" type="submit">登录</button>
+    </form>
+    <form id="register-form" class="auth-form" novalidate hidden>
+      <label class="field"><span>昵称</span><input id="register-name" type="text" maxlength="40" autocomplete="nickname" required></label>
+      <label class="field"><span>邮箱</span><input id="register-email" type="email" autocomplete="email" required></label>
+      <label class="field"><span>密码（至少 8 位）</span><input id="register-password" type="password" minlength="8" autocomplete="new-password" required></label>
+      <button class="btn btn-primary btn-block" type="submit">创建账号</button>
+    </form>
+    <p class="auth-error" id="auth-error" role="alert"></p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
