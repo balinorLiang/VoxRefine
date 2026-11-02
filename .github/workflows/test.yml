@@ -1,15 +1,22 @@
-name: test
+name: CI
 
 on:
   push:
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
 
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   test:
+    name: Full test suite
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     services:
       postgres:
         image: postgres:16-alpine
@@ -46,3 +53,84 @@ jobs:
             echo "$files"
             exit 1
           fi
+      - name: Check smoke script syntax
+        run: bash -n scripts/smoke-test.sh
+
+  smoke:
+    name: Process smoke test
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: polyphone
+          POSTGRES_PASSWORD: polyphone
+          POSTGRES_DB: polyphone
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U polyphone -d polyphone"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      GOTOOLCHAIN: local
+      APP_ENV: development
+      ADDR: 127.0.0.1:18080
+      DATABASE_URL: postgres://polyphone:polyphone@127.0.0.1:5432/polyphone?sslmode=disable
+      DB_MAX_CONNS: "4"
+      DB_MIN_CONNS: "0"
+      ADMIN_EMAIL: smoke-admin@example.invalid
+      SESSION_TTL: 1h
+      SESSION_COOKIE: pc_session
+      COOKIE_SECURE: "false"
+      TRUST_PROXY: "false"
+      GLOSSARY_SYNC: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+      - name: Build server
+        run: go build -trimpath -o "$RUNNER_TEMP/voxrefine" .
+      - name: Start server and run smoke tests
+        env:
+          BASE_URL: http://127.0.0.1:18080
+        run: |
+          set -euo pipefail
+          "$RUNNER_TEMP/voxrefine" > smoke-server.log 2>&1 &
+          server_pid=$!
+          cleanup() {
+            kill "$server_pid" 2>/dev/null || true
+            wait "$server_pid" 2>/dev/null || true
+          }
+          trap cleanup EXIT
+
+          ready=false
+          for attempt in $(seq 1 30); do
+            if curl --silent --fail --max-time 2 "$BASE_URL/api/health" >/dev/null; then
+              ready=true
+              break
+            fi
+            if ! kill -0 "$server_pid" 2>/dev/null; then
+              break
+            fi
+            sleep 1
+          done
+          if [ "$ready" != true ]; then
+            echo "server failed to become ready"
+            cat smoke-server.log
+            exit 1
+          fi
+
+          bash scripts/smoke-test.sh
+      - name: Upload smoke server log
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: smoke-server-log
+          path: smoke-server.log
+          if-no-files-found: ignore

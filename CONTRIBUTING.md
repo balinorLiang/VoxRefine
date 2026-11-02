@@ -123,6 +123,15 @@ go test ./internal/store -count=1 -v
 
 未设置 `TEST_DATABASE_URL` 时集成测试会自动跳过；测试使用唯一临时 schema，不会清空开发库。
 
+服务启动后可执行 HTTP 冒烟测试：
+
+```powershell
+$env:BASE_URL='http://127.0.0.1:8080'
+bash scripts/smoke-test.sh
+```
+
+新增或调整启动配置、关键 API、鉴权流程时，应同步更新冒烟脚本。GitHub Actions 会在全量测试通过后自动启动真实服务并执行该脚本。
+
 ## 手动验收清单
 
 1. 打开 `http://127.0.0.1:8080/?demo=1`，应检出 28 处。

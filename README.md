@@ -1,15 +1,15 @@
-# 多音字检查器
+# VoxRefine 多音字检查器
 
-面向 AI 配音和短视频创作的中文多音字检查器。粘贴文案或导入 SRT，自动标出高风险多音字，给出读音候选，并导出标注稿、腾讯云 SSML 或百度 SSML。
+面向 AI 配音和短视频文案的中文多音字检查器。粘贴文案或导入 SRT，自动标出高风险多音字，给出读音候选，并导出标注稿、腾讯云 SSML 或百度 SSML。
 
-项目目标是让初做视频的小博主在**写稿阶段**发现“重庆读成 zhòng qìng”“银行读成 yín xíng”这类问题，而不是等成片导出后再返工。
+项目目标是让初做视频的创作者在写稿阶段发现“重庆读成 zhòng qìng”“银行读成 yín xíng”这类问题，而不是等成片后再返工。
 
 ## 两个版本
 
 | 版本 | 技术栈 | 适合场景 |
 |---|---|---|
 | **v2（当前）** | Go 1.25 + PostgreSQL 16 + 原生 JS | 账号、案例库、审核、投票、词库搜索 |
-| **lite** | 纯 HTML/CSS/JS，无构建、无后端 | 零成本部署、离线使用、GitHub Pages / Cloudflare Pages |
+| **lite** | 纯 HTML/CSS/JS，无构建、无后端 | 零成本部署、离线使用、静态托管 |
 
 - v2 页面：`/`
 - 轻量静态版：`/lite/`
@@ -91,7 +91,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\stop-local-pg.ps1
 .\build-v2.bat
 ```
 
-产物：`bin\polyphone-server.exe`。生产环境建议把它和迁移/静态资源一起部署，二进制已内嵌前端、词库和迁移文件。
+产物：`bin\polyphone-server.exe`。生产环境建议把它和迁移、静态资源一起部署；二进制已内嵌前端、词库和迁移文件。
 
 ### 运行轻量静态版
 
@@ -99,7 +99,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\stop-local-pg.ps1
 .\start-lite.bat
 ```
 
-也可以直接把 `lite/` 目录部署到 Cloudflare Pages、Netlify、GitHub Pages 等静态托管。`lite/_headers` 提供了 CSP 等响应头示例。
+也可以直接把 `lite/` 目录部署到 Cloudflare Pages、Netlify、GitHub Pages 等静态托管。`lite/_headers` 提供 CSP 等响应头示例。
 
 ## 配置
 
@@ -127,6 +127,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\stop-local-pg.ps1
 4. 再按需把其他账号提升为 `moderator`（目前需要通过 SQL 或后续管理功能）。
 
 如果该邮箱已经注册成普通用户，之后再改 `ADMIN_EMAIL` 不会自动提权。
+
 ## API
 
 | 方法 | 路径 | 说明 |
@@ -173,7 +174,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\stop-local-pg.ps1
   - 投稿/投票/审核 20 次/分钟，突发 10
 - 限流桶会自动清理，避免长期运行时内存增长
 
-### 公网部署前必须做
+### 公网部署前检查
 
 - 使用 HTTPS，并设置 `COOKIE_SECURE=true`、`APP_ENV=production`
 - 修改 `ADMIN_EMAIL` 和数据库密码；不要使用示例密码
@@ -181,28 +182,17 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\stop-local-pg.ps1
 - 反向代理层再加一层限流和 WAF
 - 定期备份 PostgreSQL；迁移前先在副本验证
 - 若要开放注册，补充邮箱验证、找回密码、CAPTCHA/人机验证
-- 若要接收音视频，必须先做文件类型/大小校验、病毒扫描、访问控制和删除机制
 
-## 性能与并发
+## 性能与部署边界
 
-当前 v2 的定位是**单机、小社区规模**：
+当前 v2 的定位是单机、小社区规模：
 
 - 检查逻辑常驻内存，单次请求不需要查询词库，主要成本是文本扫描
 - 默认 PostgreSQL 连接池 12 个连接；可用 `DB_MAX_CONNS` 调整
 - 会话保存在 PostgreSQL，多实例部署可共享登录状态
-- 限流器在进程内，多实例时每个实例独立计数；公网高并发建议把限流放到网关/Redis
+- 限流器在进程内，多实例时每个实例独立计数；公网高并发建议把限流放到网关
 - 更大规模可加 PgBouncer、只读副本、CDN 和独立检查服务；不要先把连接池无脑调大
 
-### 能不能用 Supabase？
-
-可以，但建议**只把 Supabase 当托管 PostgreSQL**，Go API 仍作为唯一业务入口：
-
-- 用 `DATABASE_URL` 连接 Supabase 的 Session/Transaction Pooler，不要把数据库密码发给前端
-- 不要在前端使用 `service_role` key
-- 不在前端直接写表，账号、审核和限流仍由 Go 服务负责
-- Supabase 的区域、连接数、免费额度、跨境合规需要单独评估
-
-详细选型见 [`docs/supabase-evaluation.md`](docs/supabase-evaluation.md)。该文档写于 v0.1 阶段，结论仍然适用于“是否把 Supabase 当社区底座”的判断。
 ## 项目结构
 
 ```text
@@ -221,8 +211,9 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\stop-local-pg.ps1
 ├── web/                        # v2 无构建前端
 ├── lite/                       # 可独立部署的纯静态轻量版
 ├── index.html / app.js / styles.css  # v0.1 静态副本（兼容保留）
-├── scripts/                    # 本地 PostgreSQL 启停脚本
+├── scripts/                    # 本地 PostgreSQL 与冒烟测试脚本
 ├── tools/glossary-import/      # 从 glossary.js 生成 glossary.json（可选）
+├── .github/workflows/test.yml  # 全量测试与冒烟测试
 ├── docker-compose.yml
 ├── start-v2.bat / build-v2.bat
 └── start-lite.bat
@@ -272,6 +263,15 @@ $env:TEST_DATABASE_URL='postgres://polyphone:polyphone@127.0.0.1:55432/polyphone
 go test ./internal/store -count=1 -v
 ```
 
+启动本地服务后可运行真实 HTTP 冒烟测试（Windows 使用 Git Bash 或 WSL）：
+
+```powershell
+$env:BASE_URL='http://127.0.0.1:8080'
+bash scripts/smoke-test.sh
+```
+
+冒烟测试覆盖健康检查、主页与 `/lite/`、缓存头、词库搜索、多音字检测、统计、未登录保护、注册、会话、案例提交、退出和重新登录。
+
 检测器模糊测试可单独运行：
 
 ```powershell
@@ -285,17 +285,15 @@ go test ./internal/glossary -run=^$ -fuzz=FuzzDetectorDoesNotPanic -fuzztime=10s
 - `internal/web`：HTTP 处理、鉴权、会话、限流、安全头和错误恢复。
 - `internal/store`：迁移、词库、账号、案例、投票与审核的 PostgreSQL 集成测试。
 
-GitHub Actions 会运行竞态检测、覆盖率、`go vet` 和格式检查，并启动 PostgreSQL 16 执行集成测试。
+GitHub Actions 包含两个任务：全量测试任务运行竞态检测、覆盖率、`go vet` 和格式检查；冒烟任务编译并启动真实服务，连接 PostgreSQL 16 执行 `scripts/smoke-test.sh`，失败时上传服务日志。
 
 Windows 本地运行竞态检测需要启用 CGO 并安装 MinGW-w64 等 C 编译器；没有编译器时请依赖 CI 的竞态检查。
 
-## 路线图
+## 后续计划
 
-- **v2.0**：Go + PostgreSQL、账号、案例库、审核、SSML
-- **v2.1**：邮箱验证、找回密码、管理员后台、案例举报
-- **v2.2**：词库版本化、批量导入、审计记录
-- **v3**：视频 + SRT 单句重配音（CosyVoice / GPT-SoVITS），FFmpeg 替换音轨
-- 数字人口型同步（LatentSync / MuseTalk）单独立项，先解决模型许可与授权问题
+- v2.1：邮箱验证、找回密码、管理员后台、案例举报
+- v2.2：词库版本化、批量导入、审计记录
+- 后续评估：视频/SRT 单句重配音与音轨替换；模型、授权和成本另行验证
 
 ## 贡献
 
@@ -305,7 +303,7 @@ Windows 本地运行竞态检测需要启用 CGO 并安装 MinGW-w64 等 C 编�
 
 - 代码：MIT，见 [`LICENSE`](LICENSE)
 - 词库与案例数据：CC BY 4.0，见 [`LICENSE-DATA`](LICENSE-DATA)
-- 第三方依赖和模型遵循各自许可证；后续接入 CosyVoice、GPT-SoVITS 等模型时需单独核对
+- 第三方依赖遵循各自许可证
 
 ## 安全报告
 
